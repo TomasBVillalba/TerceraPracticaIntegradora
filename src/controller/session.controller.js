@@ -23,7 +23,7 @@ export default class SessionController {
         try {
             try {
             await transport.sendMail({
-                from: 'benjabastan@gmail.com',
+                from: 'tomasbautistavillalba@gmail.com',
                 to: req.user.email,
                 subject: 'Se ha creado una cuenta en Ecommerce Coder',
                 html: `
@@ -78,7 +78,7 @@ export default class SessionController {
             let token = jwt.sign({email}, config.jwtKey, {expiresIn: "1h"});
             req.logger.debug("Pre nodemailer")
             try {
-                transport.sendMail({from: 'benjabastan@gmail.com',
+                transport.sendMail({from: 'tomasbautistavillalba@gmail.com',
                 to: email,
                 subject: 'Reestablece tu contraseña',
                 html: `
